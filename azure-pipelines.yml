@@ -6,6 +6,10 @@
 trigger:
 - master
 
+variables:
+- name: System.Debug
+  value: true
+
 jobs:
 - job: Job_1
   displayName: Agent job 1
