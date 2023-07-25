@@ -1,0 +1,42 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+jobs:
+- job: Job_1
+  displayName: Agent job 1
+  pool:
+    name: Default
+  steps:
+  - checkout: self
+    clean: true
+    fetchTags: false
+  - task: Application security testing@2023
+    displayName: Application security testing
+    inputs:
+      projectName: TagsTest
+      syncMode: false
+      enableSastScan: false
+      CheckmarxService: 61c5f2c3-f703-4a9f-90c5-84da95eccf9c
+      fullTeamName: CxServer
+      incScan: false
+      fullScansScheduled: true
+      fullScanCycle: siaduhfx
+      generatePDFReport: true
+      failBuildForNewVulnerabilitiesEnabled: true
+      failBuildForNewVulnerabilitiesSeverity: LOW
+      high: 1
+      medium: xkcj
+      low: wkasdxf
+      enableDependencyScan: true
+      dependencyServerURL: 246a819e-6c32-4bb7-bfa4-a8f1b33f4b1f
+      scaTeam: Cxserver
+      projectCustomTags: test:proj
+      scanCustomTags: test:scan
+      isEnableScaResolver: true
+      pathToScaResolver : 'C:\SCAResolver\ScaResolver-win64'
+      scaResolverAddParameters: '-s D:\Repo\cxvscode -n CheckmarxTest --resolver-result-path C:\SCAResolver\SCA Result\a.json  --log-level Debug'
