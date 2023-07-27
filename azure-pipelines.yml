@@ -28,5 +28,5 @@ jobs:
       enableDependencyScan: true
       dependencyServerURL: b39e829f-81c9-478e-b35b-20bec8018f9e
       isEnableScaResolver: true
-      pathToScaResolver : ''
+      pathToScaResolver : 'C:\SCAResolver\ScaResolver-win64'
       scaResolverAddParameters: -s D:\Repo\cxvscode -n CheckmarxTest --resolver-result-path C:\SCAResolver\SCA Result\a.json  --log-level Debug
