@@ -19,13 +19,13 @@ jobs:
   - checkout: self
     clean: true
     fetchTags: false
-  - task: Application security testing@2023
+  - task: Application security testing@2024
     displayName: Application security testing
     inputs:
-      projectName: Test
+      projectName: RP-001
       enableSastScan: false
       fullScansScheduled: false
-      enableDependencyScan: true
+      enableDependencyScan: false
       dependencyServerURL: b39e829f-81c9-478e-b35b-20bec8018f9e
       isEnableScaResolver: true
       pathToScaResolver : ''
