@@ -24,6 +24,7 @@ jobs:
     inputs:
       projectName: RP-001
       CheckmarxService: SAST 9.7
+      fullTeamName: CxServer
       enableSastScan: true
       fullScansScheduled: false
       enableDependencyScan: false
