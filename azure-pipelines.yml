@@ -23,7 +23,7 @@ jobs:
     displayName: Application security testing
     inputs:
       projectName: RP-001
-      enableSastScan: false
+      enableSastScan: true
       fullScansScheduled: false
       enableDependencyScan: false
       dependencyServerURL: b39e829f-81c9-478e-b35b-20bec8018f9e
