@@ -23,6 +23,7 @@ jobs:
     displayName: Application security testing
     inputs:
       projectName: RP-001
+      dependencyWebAppURL: http://10.33.0.67
       enableSastScan: true
       fullScansScheduled: false
       enableDependencyScan: false
