@@ -19,7 +19,7 @@ jobs:
   - checkout: self
     clean: true
     fetchTags: false
-  - task: Application security testing@2024
+  - task: Application security testing@2023
     displayName: Application security testing
     inputs:
       projectName: RP-001
