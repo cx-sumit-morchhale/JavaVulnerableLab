@@ -22,7 +22,7 @@ jobs:
   - task: Application security testing@2024
     displayName: Application security testing
     inputs:
-      projectName: 'RahulP-106'
+      projectName: 'RahulP-107'
       enableProxy: false
       enableSastScan: true
       CheckmarxService: 'SAST 67 server'
@@ -31,6 +31,9 @@ jobs:
       incScan: false
       generatePDFReport: true
       enableDependencyScan: false
+      failBuildForNewVulnerabilitiesEnabled: true
+      failBuildForNewVulnerabilitiesSeverity: CRITICAL
+
   - task: CopyFiles@2
     inputs:
       SourceFolder: 'C:\agent\vsts-agent-win-x64-4.248.0\_work\4'
