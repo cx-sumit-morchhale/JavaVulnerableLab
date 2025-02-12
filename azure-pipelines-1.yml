@@ -1,0 +1,42 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: Default
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
+
+- task: Application security testing@2024
+  inputs:
+    projectName: 'RahulP-104'
+    enableProxy: false
+    enableSastScan: true
+    CheckmarxService: 'SAST 67 server'
+    enableSastBranching: false
+    fullTeamName: 'CxServer'
+    incScan: false
+    generatePDFReport: true
+    enableDependencyScan: false
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '/home/vsts/work/1/'
+    Contents: 'cxReport_*.json'  # Supports wildcards but NOT regex
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathToPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: 'SecurityReports'
