@@ -33,7 +33,7 @@ jobs:
       enableDependencyScan: false
   - task: CopyFiles@2
     inputs:
-      SourceFolder: '/home/vsts/work/1/'
+      SourceFolder: 'C:\agent\vsts-agent-win-x64-4.248.0\_work\4'
       Contents: 'cxReport_*.json'  # Supports wildcards but NOT regex
       TargetFolder: '$(Build.ArtifactStagingDirectory)'
   
