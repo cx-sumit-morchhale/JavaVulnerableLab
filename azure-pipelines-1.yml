@@ -32,7 +32,7 @@ jobs:
       generatePDFReport: true
       enableDependencyScan: false
       vulnerabilityThreshold: true
-      engineConfigId: 'Fast Scan'
+      engineConfigId: 'Default Configuration'
 
   - task: CopyFiles@2
     inputs:
