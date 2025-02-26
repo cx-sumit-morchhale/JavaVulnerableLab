@@ -22,7 +22,7 @@ jobs:
   - task: Application security testing@2024
     displayName: Application security testing
     inputs:
-      projectName: 'RahulP-8'
+      projectName: 'RahulP-1'
       enableProxy: false
       enableSastScan: true
       CheckmarxService: 'SAST 9.5'
@@ -32,7 +32,7 @@ jobs:
       generatePDFReport: true
       enableDependencyScan: false
       vulnerabilityThreshold: true
-      engineConfigId: 'Default Configuration'
+      engineConfigId: '6'
 
   - task: CopyFiles@2
     inputs:
