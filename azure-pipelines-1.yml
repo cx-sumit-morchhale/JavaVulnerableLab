@@ -19,8 +19,8 @@ jobs:
   - script: echo Hello, world!
     displayName: 'Run a one-line script'
   
-  - script: env | grep NODE
-    displayName: 'Check Node.js Environment Variables'
+  - script: node -v
+    displayName: 'Node version'
 
   - task: Application security testing@2024
     displayName: Application security testing
