@@ -16,9 +16,10 @@ jobs:
   pool:
     name: Default
   steps:
-  - task: NodeTool@0  # Replacing UseNode with NodeTool
+  - task: NodeTool@0
     inputs:
-      versionSpec: '16.x'  # Specify Node version (e.g., 16.x)
+      versionSpec: '16.x'  # Explicitly set the Node.js version to 10.x
+    displayName: 'Use Node.js 16'
 
 
   - script: echo Hello, world!
