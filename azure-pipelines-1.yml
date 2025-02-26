@@ -20,7 +20,12 @@ jobs:
     inputs:
       versionSpec: '16.x'  # Explicitly set the Node.js version to 10.x
     displayName: 'Use Node.js 16'
-
+  
+  - script: |
+        node --version  # This will print the Node version
+        npm install
+        npm run build
+    displayName: 'Install Dependencies and Build'
 
   - script: echo Hello, world!
     displayName: 'Run a one-line script'
