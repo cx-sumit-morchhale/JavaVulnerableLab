@@ -16,6 +16,11 @@ jobs:
   pool:
     name: Default
   steps:
+  - task: NodeTool@0  # Replacing UseNode with NodeTool
+    inputs:
+      versionSpec: '16.x'  # Specify Node version (e.g., 16.x)
+
+
   - script: echo Hello, world!
     displayName: 'Run a one-line script'
   
