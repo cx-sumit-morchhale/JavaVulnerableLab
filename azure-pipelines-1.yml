@@ -18,6 +18,10 @@ jobs:
   steps:
   - script: echo Hello, world!
     displayName: 'Run a one-line script'
+  
+  - script: node -v
+    displayName: 'Agent Node version'
+  
 
   - task: Application security testing@2024
     displayName: Application security testing
