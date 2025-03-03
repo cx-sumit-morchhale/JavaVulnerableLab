@@ -14,13 +14,9 @@ jobs:
 - job: Job_1
   displayName: Agent job 1
   pool:
-    name: Default
+    name: Linux Agent
   steps:
-  - task: NodeTool@0
-    inputs:
-      versionSpec: '16.x'  # Explicitly set the Node.js version to 10.x
-    displayName: 'Use Node.js 16'
-  
+
   - script: |
         node --version  # This will print the Node version
         npm install
