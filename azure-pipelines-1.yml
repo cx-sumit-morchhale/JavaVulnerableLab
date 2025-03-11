@@ -17,17 +17,7 @@ jobs:
     name: Linux Agent
   steps:
 
-  - script: |
-        node --version  # This will print the Node version
-        npm install
-        npm run build
-    displayName: 'Install Dependencies and Build'
 
-  - script: echo Hello, world!
-    displayName: 'Run a one-line script'
-  
-  - script: node -v
-    displayName: 'Node version'
 
   - task: Application security testing@2025
     displayName: Application security testing
@@ -43,14 +33,3 @@ jobs:
       enableDependencyScan: false
       vulnerabilityThreshold: true
       engineConfigId: '6'
-
-  - task: CopyFiles@2
-    inputs:
-      SourceFolder: 'C:\agent\vsts-agent-win-x64-4.248.0\_work\4'
-      Contents: 'cxReport_*.json'  # Supports wildcards but NOT regex
-      TargetFolder: '$(Build.ArtifactStagingDirectory)'
-  
-  - task: PublishBuildArtifacts@1
-    inputs:
-      pathToPublish: '$(Build.ArtifactStagingDirectory)'
-      artifactName: 'SecurityReports'
