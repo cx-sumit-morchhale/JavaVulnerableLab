@@ -26,3 +26,4 @@ jobs:
       projectName: '$(Build.Repository.Name)'
       branchName: '$(Build.SourceBranchName)'
       tenantName: 'cx_seg'
+      additionalParams: '--ignore-policy'
