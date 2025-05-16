@@ -22,8 +22,7 @@ jobs:
     fetchTags: false
   - task: Checkmarx AST@3
     inputs:
-      CheckmarxService: 'CxOneAST'
-      projectName: '$(Build.Repository.Name)'
-      branchName: '$(Build.SourceBranchName)'
-      tenantName: 'cx_seg'
-      additionalParams: '--ignore-policy'
+       CheckmarxService: 'CxOne'
+       projectName: 'sumit-ado-test1'
+       branchName: '$(Build.SourceBranchName)'
+       tenantName: 'cx_seg'
