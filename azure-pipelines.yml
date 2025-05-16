@@ -26,3 +26,4 @@ jobs:
        projectName: 'sumit-ado-test1'
        branchName: '$(Build.SourceBranchName)'
        tenantName: 'cx_seg'
+       additionalParams: '--ignore-policy'
